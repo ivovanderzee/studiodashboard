@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="47px" viewBox="0 0 56 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Social icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-34.0%" y="-2.5%" width="168.0%" height="105.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Radio1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Studio-Dashboard_ModuleAdd" transform="translate(-9.000000, -652.000000)">
+            <g id="MENU-LEFT" filter="url(#filter-1)">
+                <g id="icons" transform="translate(18.000000, 338.000000)">
+                    <g id="Social-icon" transform="translate(0.000000, 322.000000)">
+                        <path d="M7.09170378,2.25 L7.05110308,21.4788889 C7.04954468,22.2169619 6.68609973,22.9073377 6.07850725,23.326367 L4.39965122,24.4841987 L6.96647307,24.3304337 C7.03370527,24.3270787 7.03370527,24.3270787 7.10101777,24.3264073 L34.75,24.3264073 L34.75,2.25 L7.09170378,2.25 Z" id="Rectangle" stroke="#FFFFFF" stroke-width="2.5" fill="#FFFFFF"></path>
+                        <text id="@" font-family="Avenir-Black, Avenir" font-size="20" font-weight="700" fill="#003576">
+                            <tspan x="13" y="20">@</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

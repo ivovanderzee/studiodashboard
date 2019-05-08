@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="62px" viewBox="0 0 56 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>news</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-34.0%" y="-2.5%" width="168.0%" height="105.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Radio1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Studio-Dashboard_ModuleAdd" transform="translate(-10.000000, -523.000000)">
+            <g id="MENU-LEFT" filter="url(#filter-1)">
+                <g id="icons" transform="translate(18.000000, 338.000000)">
+                    <g id="news" transform="translate(3.000000, 195.000000)">
+                        <rect id="Rectangle" fill="#FFFFFF" x="5.35716233" y="-0.612211179" width="28.5721684" height="39.4263999"></rect>
+                        <path d="M1.71311579,12.7608696 L1.71311579,33.3233696 C1.71311579,35.4979908 3.47599459,37.2608696 5.65061579,37.2608696 L8.01231578,37.2608696 C11.4912679,37.2608696 14.3115158,34.4406217 14.3115158,30.9616696 L14.3115158,19.0600696 C14.3115158,15.5811175 11.4912679,12.7608696 8.01231578,12.7608696 L1.71311579,12.7608696 Z" id="Rectangle" stroke="#FFFFFF" stroke-width="2.625"></path>
+                        <rect id="Rectangle" fill="#003576" x="7.59105042" y="2.41211311" width="8.45991578" height="8.45991578"></rect>
+                        <rect id="Rectangle" fill="#003576" x="17.8444454" y="4.21682314" width="13.0889263" height="1.43658947"></rect>
+                        <rect id="Rectangle" fill="#003576" x="17.7394316" y="7.60812749" width="9.09839999" height="1.43658947"></rect>
+                        <rect id="Rectangle" fill="#003576" x="7.90609197" y="12.695084" width="20.4314947" height="1.43658947"></rect>
+                        <rect id="Rectangle" fill="#003576" x="7.85148476" y="16.9342144" width="18.356421" height="1.43658947"></rect>
+                        <rect id="Rectangle" fill="#003576" x="7.93129529" y="20.3255188" width="21.389221" height="1.43658947"></rect>
+                        <rect id="Rectangle" fill="#003576" x="7.74647091" y="24.5646492" width="14.3658947" height="1.43658947"></rect>
+                        <rect id="Rectangle" fill="#003576" x="7.8850892" y="28.8037797" width="19.6333894" height="1.43658947"></rect>
+                        <rect id="Rectangle" fill="#003576" x="7.81788033" y="33.0429101" width="17.0794526" height="1.43658947"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="61px" viewBox="0 0 56 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>baseline-calendar_today-24px</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-34.0%" y="-2.5%" width="168.0%" height="105.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Radio1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Studio-Dashboard_ModuleAdd" transform="translate(-11.000000, -393.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="MENU-LEFT" filter="url(#filter-1)">
+                <g id="icons" transform="translate(18.000000, 338.000000)">
+                    <g id="baseline-calendar_today-24px" transform="translate(4.000000, 64.000000)">
+                        <path d="M30.6,3.54545455 L28.9,3.54545455 L28.9,0 L25.5,0 L25.5,3.54545455 L8.5,3.54545455 L8.5,0 L5.1,0 L5.1,3.54545455 L3.4,3.54545455 C1.53,3.54545455 0,5.14090909 0,7.09090909 L0,35.4545455 C0,37.4045455 1.53,39 3.4,39 L30.6,39 C32.47,39 34,37.4045455 34,35.4545455 L34,7.09090909 C34,5.14090909 32.47,3.54545455 30.6,3.54545455 Z M30.6,35.4545455 L3.4,35.4545455 L3.4,12.4090909 L30.6,12.4090909 L30.6,35.4545455 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
