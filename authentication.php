@@ -12,7 +12,7 @@ include 'start.php';
      
     if(empty($email) || empty($password)){
          
-        header("Location: login.php?login=empty");
+        header("Location: index.php?login=empty");
         exit();
          
     }else{
@@ -22,7 +22,7 @@ include 'start.php';
          
         if($resultCheck < 1){
              
-           header("Location: login.php?login=invalid");
+           header("Location: index.php?login=invalid");
            exit(); 
              
         }else{
@@ -34,8 +34,9 @@ include 'start.php';
                 if($password == $row['password']){
                      
                      
+                 
                     $_SESSION['id'] = $row['id'];
-                    header("Location: index.php");
+                    header("Location: home.php");
                     exit();
                    
                      
@@ -43,7 +44,7 @@ include 'start.php';
                  
                 else{
                      
-                   header("Location: login.php?login=error2");
+                   header("Location: index.php?login=error2");
                      
                 }
                  
@@ -54,7 +55,7 @@ include 'start.php';
      
      
 }else{
-        header("Location: login.php?login=error3");
+        header("Location: index.php?login=error3");
         exit();
     }
 

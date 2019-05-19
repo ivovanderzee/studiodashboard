@@ -32,6 +32,30 @@ body,html{
 }
 
 
+
+.profile{
+    
+    float: right;
+    top: 0;
+    right: 0;
+    margin-right: 35px;
+    margin-top: 30px;
+
+}
+
+.profileImage{
+    
+    
+    width: 70px;
+    border-radius: 50%;
+    height: 70px;
+    border-color: #003576;
+    border-width: 3px;
+    border-style: solid;
+
+}
+
+
 .addButton{
     
     height: 55px;
@@ -74,10 +98,10 @@ body,html{
 
 .laneTitle{
     
-    margin-top: 180px;
+    margin-top: 15vh;
     margin-left: 200px;
-    width: 18vw;
-    height: 7vh;
+    width: 24vw;
+    height: 9vh;
     background-color: #003576;
    
     font-family: avenir;
@@ -87,11 +111,65 @@ body,html{
     
      
     z-index: 10;
-    line-height: 7vh;
+    line-height: 9vh;
     box-shadow: 8 4px 11px 9 rgba(0,0,0,0.5);
     
     
 }
+
+
+.itemContent{
+    
+    
+    height: 25vh;
+    width: 19vw;
+    background-color: white;
+    opacity: 0.5;
+    float: left;
+    
+    padding-top: 40px;
+ 
+    
+}
+
+
+.title{
+    
+    color: black;
+    font-family: avenir;
+    font-weight: bolder;
+  
+    color: black;
+    margin-left: 15px;
+    font-size: 1.19vw;;
+    
+}
+
+.subTitle{
+    
+    color: black;
+    font-family: avenir;
+ 
+    color: black;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 1vw;;
+    
+}
+
+
+.subSubTitle{
+    
+    color: black;
+    font-family: avenir;
+    
+    color: black;
+    margin-left: 15px;
+    margin-top: 2px;
+    font-size: 0.8vw;;
+    
+}
+
 
 .spanTitle{
     
@@ -102,11 +180,11 @@ body,html{
     
     z-index: 0;
     margin-left: 200px;
-     width: 18vw;
+     width: 24vw;
 
-    height: 75vh;
+    height: 70vh;
     background-color: white;
-    line-height: 70px;
+  
     color: white;
     font-size: 25px;
 
@@ -129,20 +207,52 @@ body,html{
   
 }
 
-.item{
+.itemWrapper{
     
-    height: 200px;
-    width: 18vw;
+    height: 25vh;
+    width: 24vw;
   
-    background-color: bisque;
+    background-color: whitesmoke;
     margin: 0 auto;
     margin-bottom: 15px;
+  
+    overflow: hidden;
     
-    
+}
 
+
+
+.date{
     
+    height: 25vh;
+    width: 5vw;
+    background-color: #003576;
+    opacity: 0.5;
+    
+    float: left;
+    position: relative;
+  
+   
+    
+}
+
+
+.icon{
   
     
+max-height: 100%;  
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+    
+
+ 
     
 }
 
@@ -340,6 +450,10 @@ li:hover{
     border-radius: 3px;
     
 }
+
+
+
+/*MODULES*/
 
 
 

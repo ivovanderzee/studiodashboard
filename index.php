@@ -1,13 +1,4 @@
-
-<?php
-
-session_start();
-
-if ( isset( $_SESSION['id'] ) ) { ?>
-    
-
-    
-    <!doctype html>
+<!doctype html>
 
 <html lang="en">
 <head>
@@ -17,11 +8,10 @@ if ( isset( $_SESSION['id'] ) ) { ?>
  
 
   <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body id="fixed">
-  <script>var fixed = document.getElementById('fixed');
+    
+    
+    
+<script>var fixed = document.getElementById('noScroll');
 
 fixed.addEventListener('touchmove', function(e) {
 
@@ -30,68 +20,61 @@ fixed.addEventListener('touchmove', function(e) {
 }, false);</script>
     
     
-   
-      
-     
-    <div class="left-menu">
-        <div class="logo"><img src="IMAGES/radio1Logo.png" height="50" width="75" /></div>
-        
-        
-        <ul>
-            <li><img src="IMAGES/ICONS/baseline-message-24px.svg" width="45"/></li>
-            <li><img src="IMAGES/ICONS/baseline-calendar_today-24px.svg" width="45"/></li>
-            <li><img src="IMAGES/ICONS/Music-icon.svg" width="45"/></li>
-            <li><img src="IMAGES/ICONS/news.svg" width="45"/></li>
-            <li><img src="IMAGES/ICONS/traffic-icon.svg" width="45"/></li>
-            <li><img src="IMAGES/ICONS/Social%20icon.svg" width="45"/></li>
-        </ul>
-        
-       <div class="addButton"><img src="IMAGES/ICONS/addIcon.svg" height="55" /></div>
-        
-        </div>
-  
     
-    <div class="wrapperSter">
-       
-        </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+       $("#loginButton").click(function() {
+           $("#inlogForm").submit();
+       });
+    });
+</script>
+
+</head>
+
+<body id="noScroll">
     
+ 
     
-    
-    <div class="lane">
-    <div class="laneTitle">
-        <span class="spanTitle">GASTEN</span>
-        </div>
-    <div class="laneContent">
-        
-        <div class="item"></div>
-         <div class="item"></div>
-         <div class="item"></div>
-         <div class="item"></div>
-         <div class="item"></div>
-         <div class="item"></div>
-         <div class="item"></div>
-         <div class="item"></div>
+    <div class="left">
         
         
-        </div>
+        <div class="logoLoginPage"><img src="IMAGES/radio1Logo.png" width="160" /></div>
+    
+    <span class="leftSpan">STUDIODASHBOARD/
+        <br>LOGIN
+        </span>
+        
+        <br>
+        <span class="subHead">/LOGIN</span>
+    
     </div>
+   <div class="right">
+    
+  
+       
+       
+       <div class="login">
+       <form class="inlogForm" id="inlogForm" action="authentication.php" method="POST">
+      
+            <input class="inputField" name="email" type="text" placeholder="e-mail">
+            <br>
+            <input class="inputField" name="password" type="password" placeholder="wachtwoord">
+            <br>
+            <input type="submit" name="submit" style="display:none;" />
+            
+           </form>
+       
+       
+       
+       </div>
+       
+       <input  name="submit" class="loginButton" id="loginButton" value="LOGIN" type="submit" form="inlogForm">
+       
+       </div>
+       
+
+    
     
     
 </body>
 </html>
-    
-    
-    
-    
-    
-    
-    
-<?php    
-} else {
-    // Redirect them to the login page
-    header("Location: login.php");
-}
-?>
-
-
-
