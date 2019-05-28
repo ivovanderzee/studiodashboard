@@ -70,7 +70,6 @@ if ( isset( $_SESSION['username'] ) ) { ?>
     
  
 
-    
   
 
 
@@ -98,6 +97,7 @@ if ( isset( $_SESSION['username'] ) ) { ?>
             <li><a href="<?php echo $activeModule['link']; ?>"><img src="<?php echo $activeModule['image'];?>" width="45"/></a></li>
             
             
+            
             <?php endforeach; ?>
             
         </ul>
@@ -106,6 +106,31 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         
         
         </div>
+    
+    
+    
+      
+    <div class="animation">
+    
+    <div class="animation-content">
+        
+        
+        <span class="radioStationTitleAnimation">NPO RADIO 1</span>
+        <br>
+        <span class="studioDashboardAnimation">STUDIO DASHBOARD</span>
+        
+        <br>
+        <span class="moduleTitleAnimation">/KALENDER</span>
+        
+        
+    </div>
+    
+    
+    
+    </div>
+    
+    
+  
     
     
     

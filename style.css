@@ -21,7 +21,7 @@ body,html{
     height: 100vh;
     width: 75px;
     background-color: #003576;
-
+    z-index: 10;
     display: table;
     text-align: center;
     box-shadow: 0 4px 11px 0 rgba(0,0,0,0.5);
@@ -32,27 +32,53 @@ body,html{
 }
 
 
+.indicator{
+    
+    background-color: white;
+    width: 0.35vw;
+    height: 6.5vh;
+    position: absolute;
+    float: left;
+    margin-top: 59.7vh;
+}
+
+
 
 .profile{
-    
+    position: fixed;
+
     float: right;
-    top: 0;
-    right: 0;
     margin-right: 35px;
     margin-top: 30px;
+    right: 0;
+    top: 0;
+    display: table;
 
 }
 
 .profileImage{
     
     
-    width: 70px;
+    width: 4.5vw;
     border-radius: 50%;
-    height: 70px;
+    height: 4.5vw;
     border-color: #003576;
     border-width: 3px;
     border-style: solid;
+    float: right;
+    margin-left: 2vw;
 
+}
+
+
+.loginName{
+    
+    font-family: avenir;
+    font-weight: normal;
+    font-size: 1.7vw;
+    display: table-cell;
+    vertical-align: middle;
+    
 }
 
 
@@ -62,7 +88,10 @@ body,html{
     width: 55px;
     border-radius: 50%;
     position: absolute;
-    
+    background-image: url(IMAGES/ICONS/addIcon.svg);
+    background-size: cover;
+    border-style: none;
+    outline-style: none;
     
    
     bottom: 0;
@@ -71,54 +100,194 @@ body,html{
     margin-bottom: 45px;
     z-index: 10;
     
-    transition: all .2s ease-in-out;
+   transition: all .2s ease-in-out;
     
 
  }
+
+
 
 .addButton:hover{
     
     transform: scale(1.2);
 }
 
-.wrapperSter{
+
+
+
+
+.wrapperSterTijden{
     
-    height: 8vh;
-    width: 465px;
+    height: 11vh;
+    width: 34vw;
     margin-top: 20px;
     
-    margin-left: 95px;
+    margin-left: 100px;
      box-shadow: 0 4px 11px 0 rgba(0,0,0,0.5);
-    background-color: #003576;
-    position: fixed;
-   
-   
+    background-color: bisque;
+    position: fixed; 
 }
+
+
+.programInfo{
+    
+    float: left;
+    background-color: #003576;
+    height: 11vh;
+    width: 22vw;
+    font-family: avenir;
+    font-weight: bolder;
+    font-size: 2.5vh;
+    
+    
+}
+
+
+.content{
+    
+    margin: 0 auto;
+    height: 11vh;
+    
+    margin-left: 10px;
+    
+}
+
+
+
+
+
+.programNameTitle{
+    
+    font-family: avenir;
+    font-weight: bold;
+    font-size: 2.5vh;
+    width: 10px;
+    color: white;
+    height: 10px;
+    
+}
+
+
+.programTimes{
+    
+    font-family: avenir;
+   margin-top: 20px;
+    font-size: 2vh;
+    color: white;
+    font-weight: lighter;
+}
+
+
+.sterTijden{
+    
+    float: left;
+    background-color: #ffffff;
+    height: 11vh;
+    width: 12vw;
+    
+    
+}
+
+
+.contentSter{
+    
+    float: left;
+    width: 6vw;
+    color: black;
+    text-align: center;
+    margin-top: 3vh;
+    font-family: avenir;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+
+.time{
+    font-weight: lighter;
+    
+}
+
+
+ 
+.lanesWrapper{
+    
+    margin-top: 17vh;
+    padding-left: 10vw;
+   white-space:nowrap;
+    overflow-x: scroll;
+    height: 79vh;
+    width: 90;
+    overflow-y: hidden;
+    
+    
+    
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.laneWrapper{
+    
+    display: inline-block;
+    height: 79vh;
+    width: 24vw;
+    background-color: bisque;
+    margin-right: 30px;
+    
+    
+    
+}
+
 
 
 .laneTitle{
     
-    margin-top: 15vh;
-    margin-left: 200px;
+   z-index: 2;
+    
     width: 24vw;
     height: 9vh;
     background-color: #003576;
-   
+ 
     font-family: avenir;
     font-weight: bold;
     color: white;
     font-size: 2.1vh;
     
      
-    z-index: 10;
+   
     line-height: 9vh;
+    
+    
+    
+}
+
+
+.laneContent{
+    
+  
+ 
+     width: 24vw;
+
+    height: 70vh;
+    background-color: white;
+  
+    color: white;
+    font-size: 25px;
+    
+  
+   
+    overflow: scroll;
     box-shadow: 8 4px 11px 9 rgba(0,0,0,0.5);
     
     
 }
 
 
-.itemContent{
+.itemContentWrapper{
     
     
     height: 25vh;
@@ -126,10 +295,18 @@ body,html{
     background-color: white;
     opacity: 0.5;
     float: left;
+    display: table;
+     
+}
+
+.itemContent{
     
-    padding-top: 40px;
- 
-    
+    vertical-align: middle;
+    height: 25vh;
+    width: auto;
+    margin: 0 auto;
+    display: table-cell;
+     
 }
 
 
@@ -176,36 +353,9 @@ body,html{
     margin-left: 15px;
 }
 
-.laneContent{
-    
-    z-index: 0;
-    margin-left: 200px;
-     width: 24vw;
-
-    height: 70vh;
-    background-color: white;
-  
-    color: white;
-    font-size: 25px;
-
-    position: absolute;
-   
-    overflow: scroll;
-    box-shadow: 8 4px 11px 9 rgba(0,0,0,0.5);
-    
-    
-}
 
 
-.lane{
-    
-    margin: 0 auto;
-    
- 
-   
-        
-  
-}
+
 
 .itemWrapper{
     
@@ -228,11 +378,26 @@ body,html{
     width: 5vw;
     background-color: #003576;
     opacity: 0.5;
-    
+    display: table;
     float: left;
     position: relative;
   
    
+    
+}
+
+
+.roadName{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: avenir;
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+    
+    
     
 }
 
@@ -454,6 +619,260 @@ li:hover{
 
 
 /*MODULES*/
+
+.modulesWrapper{
+    
+    
+    background-color: #032856;
+    height: 100vh;
+    width: 27vw;
+
+    color: white;
+    font-family: avenir;
+    font-weight: bolder;
+    overflow: hidden;
+    position: absolute;
+    z-index: 5;
+     transition:visibility 0.7s linear,opacity 0.3s linear;
+    
+}
+
+
+.titleSpan{
+    
+
+    margin-left: 100px;
+    font-size: 3vw;
+    margin-top: 20px;
+   
+    
+}
+
+
+.backButton{
+    
+    height: 45px;
+    width: 45px;
+    background-image: url(IMAGES/ICONS/baseline-arrow_back-24px.png);
+    background-size: cover;
+    margin-left: 100px;
+    margin-top: 60px;
+    border-style: none;
+    outline-style: none;
+    
+    background-color: transparent;
+    color: transparant;
+   
+     transition: all .2s ease-in-out;
+ }
+
+.backButton:hover{
+    
+    transform: scale(1.2);
+}
+
+
+
+
+.searchBar{
+    
+    height: 4.5vh;
+    width: 18vw;
+    background-color: white;
+    border-radius: 3px;
+    padding: 5px;
+    border-style: none;
+    outline-style: none;
+    margin-left: 100px;
+    font-family: avenir;
+    color: grey;
+    font-size: 15px;
+    position: absolute;
+    margin-top: -20px;
+  
+  
+}
+
+
+.modulesRow{
+    
+    
+    height: 65vh;
+    width: 20vw;
+   background-color: #032856;
+    bottom: 0;
+    margin-left: 100px;
+    margin: 0 aut;
+    overflow: scroll;  
+    margin-top: 100px;
+
+}
+
+.moduleItem{
+    
+    
+    background-color: white;
+    width: 18.5vw;
+    margin-left: 0;
+    height: 20vh;
+    border-radius: 3px;
+    margin-bottom: 25px;
+ 
+    
+   
+}
+
+
+.selectItem{
+    height: 20vh;
+    width: 4vw;
+    background-color: lightgray;
+    position: relative;
+    float: right;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+ 
+    float: right;
+ 
+    
+}
+
+
+.moduleItemContent{
+    
+    float: left;
+    width: 14.5vw;
+    height: 20vh;
+    
+}
+
+.moduleTitle{
+    
+    
+    color: black;
+     position: relative;
+    font-family: avenir;
+    font-weight: bold;
+    margin-left: 10px;
+
+}
+
+.moduleText{
+    
+    
+    color: black;
+    position: relative;
+    font-family: avenir;
+    font-weight: bold;
+    margin-left: 10px;
+    width: 180px;
+    font-weight: lighter;
+    font-size: 12px;
+ 
+
+}
+
+
+input[type="checkbox"]{
+    
+    
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+    
+    
+cursor: pointer;
+-webkit-appearance: none;
+appearance: none;
+background: #34495E;
+border-radius: 3px;
+box-sizing: border-box;
+
+width: 30px;
+height: 30px;
+border-width: 0;
+transition: all .2s linear;
+}
+input[type="checkbox"]:checked{
+  background-color: #009CDD;
+}
+input[type="checkbox"]:focus{
+  outline: 0 none;
+  box-shadow: none;
+}
+
+
+
+
+/*animation moduleName*/
+
+
+.animation{
+    
+    
+    height: 100vh;
+    width: 100vw;
+    background-color: #032856;
+    position: relative;
+    z-index: 5;
+
+    
+    display: flex;
+  justify-content: center;
+  align-items: center; 
+    
+    
+ 
+    
+}
+
+
+.animation-content{
+    
+    background-color: transparent;
+   
+    top: 0;
+    left: 0;
+    z-index: 7;
+    margin: 0 auto;
+    height: 60%;
+    width: 75%;
+    display: table;
+}
+
+.radioStationTitleAnimation{
+    
+    color: white;
+    font-family: avenir;
+    font-weight: bolder;
+    font-size: 200%;
+    height: 1px;
+}
+
+.studioDashboardAnimation{
+    
+    color: white;
+    font-family: avenir;
+    font-weight: bolder;
+    font-size: 450%;
+    height: 1px;
+}
+
+
+.moduleTitleAnimation{
+    
+    color: white;
+    font-family: avenir;
+    font-weight: bolder;
+    font-size: 350%;
+    height: 1px;
+}
 
 
 

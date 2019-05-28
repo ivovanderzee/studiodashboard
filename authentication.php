@@ -35,8 +35,10 @@ include 'start.php';
                      
                      
                  
-                    $_SESSION['id'] = $row['id'];
-                    header("Location: home.php");
+                    $_SESSION['username'] = $row['name'];
+                    $_SESSION['userImage'] = $row['image'];
+                    $username = $row['name'];
+                    header("Location: trafficInfo.php");
                     exit();
                    
                      
