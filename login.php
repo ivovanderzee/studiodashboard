@@ -38,7 +38,7 @@ fixed.addEventListener('touchmove', function(e) {
     <div class="left">
         
         
-        <div class="logoLoginPage"><img src="IMAGES/radio1Logo.png" width="160" /></div>
+        <div class="logoLoginPage"><img src="images/radio1Logo.png" width="160" /></div>
     
     <span class="leftSpan">STUDIODASHBOARD/
         <br>LOGIN

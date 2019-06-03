@@ -1,11 +1,7 @@
 <?php
 
 session_start();
-require 'trafficQuery.php';
-require 'moduleQuery.php';
-require 'constructionQuery.php';
-require 'trafficDelayQuery.php';
-require 'incidentsQuery.php';
+require 'DBqueries.php';
 
 
 if ( isset( $_SESSION['username'] ) ) { ?>
@@ -92,7 +88,7 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         
         
         <ul>
-            <?php foreach ($modulesActive as $activeModule): ?>
+            <?php foreach ($resultsActiveModules as $activeModule): ?>
             
             
             <li><a href="<?php echo $activeModule['link']; ?>"><img src="<?php echo $activeModule['image'];?>" width="45"/></a></li>
@@ -124,7 +120,7 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         <div class="modulesRow">
         
             
-            <?php foreach($modules as $module): ?>
+            <?php foreach($resultsModules as $module): ?>
         
         <div class="moduleItem">
             
@@ -215,16 +211,16 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         
         
 
-  <?php foreach($results as $result): ?>
+  <?php foreach($resultsTrafficOV as $trafficOV): ?>
         
          <div class="itemWrapper">
         <div class="date">
              
 
-            <?php if ($result['type'] == "Storing") : ?>
+            <?php if ($trafficOV['type'] == "Storing") : ?>
             <img class="icon" src="IMAGES/ICONS/signIcon.svg">
             
-            <?php elseif($result['type'] == "Werkzaamheden") : ?>
+            <?php elseif($trafficOV['type'] == "Werkzaamheden") : ?>
             <img class="icon" src="IMAGES/ICONS/construction.svg">
             <?php endif; ?>
             
@@ -239,10 +235,10 @@ if ( isset( $_SESSION['username'] ) ) { ?>
            <div id="" class="itemContent">
                
                
-            <p class="title"><?php echo $result['type'];?></p>
-                <p class="subTitle"><?php echo $result['stationVan'];?></p>
+            <p class="title"><?php echo $trafficOV['type'];?></p>
+                <p class="subTitle"><?php echo $trafficOV['stationVan'];?></p>
                
-                 <p class="subSubTitle"><?php echo $result['delay'] . " " . "minuten vertraging";?></p>
+                 <p class="subSubTitle"><?php echo $trafficOV['delay'] . " " . "minuten vertraging";?></p>
              
              </div>
                
@@ -276,7 +272,7 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         
         
 
-  <?php foreach($constructions as $construction): ?>
+  <?php foreach($resultsConstructions as $construction): ?>
         
          <div class="itemWrapper">
         <div class="date">
@@ -331,7 +327,7 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         
         
 
-  <?php foreach($trafficDelays as $trafficDelay): ?>
+  <?php foreach($resultsTrafficDelays as $trafficDelay): ?>
         
          <div class="itemWrapper">
         <div class="date">
@@ -384,7 +380,7 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         
         
 
-  <?php foreach($incidents as $incident): ?>
+  <?php foreach($resultsIncidents as $incident): ?>
         
          <div class="itemWrapper">
         <div class="date">
