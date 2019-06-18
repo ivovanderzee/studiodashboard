@@ -16,10 +16,7 @@ if ( isset( $_SESSION['username'] ) ) { ?>
 <head>
   <meta charset="utf-8">
 
-  <title>Studio Dashboard</title>
-    
-    
-    
+  <title>Studio Dashboard</title> 
     <script type = "text/javascript" 
          src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
       </script>
@@ -47,31 +44,35 @@ if ( isset( $_SESSION['username'] ) ) { ?>
            
 				
          });
-			
+        
+        
+        
+        
+ 	
       </script>
     
-    
-    
-  
+    <script>      
+        
+        $(document).ready(function(){
+  $('li').on('click', function(){
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
       
-
-
+      
+      
+      
+  })
+})
+		</script>
+    
+    
   <link rel="stylesheet" href="style.css">
+  
 
 </head>
 
 <body id="fixed">
-    
-
-    
  
-
-    
-  
-
-
-       
-      
     <div class="profile">
         
     <span class="loginName"><?php echo $_SESSION['username']; ?></span>
@@ -82,21 +83,32 @@ if ( isset( $_SESSION['username'] ) ) { ?>
     
      
     <div class="left-menu">
-        <div class="logo"><img src="IMAGES/radio1Logo.png" height="50" width="75" /></div>
         
-        <div class="indicator"></div>
+        <div class="logo"><img src="IMAGES/radio1Logo.png" height="50" width="75" /></div>
+         
+    
+  
         
         
         <ul>
+            
+            
+        
+            <?php $count = 0; ?>
             <?php foreach ($resultsActiveModules as $activeModule): ?>
+            <?php $count++; ?>
             
             
-            <li><a href="<?php echo $activeModule['link']; ?>"><img src="<?php echo $activeModule['image'];?>" width="45"/></a></li>
-            
+            <li <?php if ($count == 1){echo 'class="active"';}?> title="<?php $activeModule['name']; ?>"><a href="#"><svg height="40px"; width="40px"; fill="#FFFFFF" viewBox="0 0 37 40"><path d="<?php echo $activeModule['svgCode']; ?>"/></svg></a></li>
             
             <?php endforeach; ?>
             
+            <div id="indicator"></div>
+             
         </ul>
+        
+        
+        
         
     <input id="addButton" class="addButton" type="button">
         

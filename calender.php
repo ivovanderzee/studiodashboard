@@ -1,11 +1,7 @@
 <?php
 
 session_start();
-require 'trafficQuery.php';
-require 'moduleQuery.php';
-require 'constructionQuery.php';
-require 'trafficDelayQuery.php';
-require 'incidentsQuery.php';
+require 'DBqueries.php';
 
 
 if ( isset( $_SESSION['username'] ) ) { ?>
@@ -70,6 +66,7 @@ if ( isset( $_SESSION['username'] ) ) { ?>
     
  
 
+    
   
 
 
@@ -91,11 +88,10 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         
         
         <ul>
-            <?php foreach ($modulesActive as $activeModule): ?>
+            <?php foreach ($resultsActiveModules as $activeModule): ?>
             
             
             <li><a href="<?php echo $activeModule['link']; ?>"><img src="<?php echo $activeModule['image'];?>" width="45"/></a></li>
-            
             
             
             <?php endforeach; ?>
@@ -106,31 +102,6 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         
         
         </div>
-    
-    
-    
-      
-    <div class="animation">
-    
-    <div class="animation-content">
-        
-        
-        <span class="radioStationTitleAnimation">NPO RADIO 1</span>
-        <br>
-        <span class="studioDashboardAnimation">STUDIO DASHBOARD</span>
-        
-        <br>
-        <span class="moduleTitleAnimation">/KALENDER</span>
-        
-        
-    </div>
-    
-    
-    
-    </div>
-    
-    
-  
     
     
     
@@ -149,7 +120,7 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         <div class="modulesRow">
         
             
-            <?php foreach($modules as $module): ?>
+            <?php foreach($resultsModules as $module): ?>
         
         <div class="moduleItem">
             
@@ -231,7 +202,7 @@ if ( isset( $_SESSION['username'] ) ) { ?>
     <div class="lanesWrapper">
     <div class="laneWrapper">
     <div class="laneTitle">
-        <span class="spanTitle">OV-info</span>
+        <span class="spanTitle">VERVANGINGEN</span>
         </div>
     <div class="laneContent">
         
@@ -240,16 +211,16 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         
         
 
-  <?php foreach($results as $result): ?>
+  <?php foreach($resultsTrafficOV as $trafficOV): ?>
         
          <div class="itemWrapper">
         <div class="date">
              
 
-            <?php if ($result['type'] == "Storing") : ?>
+            <?php if ($trafficOV['type'] == "Storing") : ?>
             <img class="icon" src="IMAGES/ICONS/signIcon.svg">
             
-            <?php elseif($result['type'] == "Werkzaamheden") : ?>
+            <?php elseif($trafficOV['type'] == "Werkzaamheden") : ?>
             <img class="icon" src="IMAGES/ICONS/construction.svg">
             <?php endif; ?>
             
@@ -264,10 +235,10 @@ if ( isset( $_SESSION['username'] ) ) { ?>
            <div id="" class="itemContent">
                
                
-            <p class="title"><?php echo $result['type'];?></p>
-                <p class="subTitle"><?php echo $result['stationVan'];?></p>
+            <p class="title"><?php echo $trafficOV['type'];?></p>
+                <p class="subTitle"><?php echo $trafficOV['stationVan'];?></p>
                
-                 <p class="subSubTitle"><?php echo $result['delay'] . " " . "minuten vertraging";?></p>
+                 <p class="subSubTitle"><?php echo $trafficOV['delay'] . " " . "minuten vertraging";?></p>
              
              </div>
                
@@ -284,174 +255,16 @@ if ( isset( $_SESSION['username'] ) ) { ?>
       
         
         
+        <button type="submit" class="addElement">Voeg toe</button>
         </div>
+        
+        
+        
+        
+        
     </div>
         
-        
-        
-        
-        <div class="laneWrapper">
-    <div class="laneTitle">
-        <span class="spanTitle">Wegwerkzaamheden</span>
-        </div>
-    <div class="laneContent">
-        
-        
-        
-        
-        
-
-  <?php foreach($constructions as $construction): ?>
-        
-         <div class="itemWrapper">
-        <div class="date">
-             
-
-            
-            <span class="roadName"><?php echo $construction['road']; ?></span>
-             
-             
-             </div>
-           
-           <div id="" class="itemContentWrapper">
-               
-               
-               <div class="itemContent">
-               
-               
-            <p class="title"><?php echo $construction['cityRoad'];?></p>
-                <p class="subTitle"><?php echo $construction['trajectBegin'] . " " . "-" . " " . $construction['trajectEnd'];?></p>
-               
-                </div>
-            
-             
-             </div>
-             
-             
-             
-        </div>
-
-        
-   <?php endforeach; ?>
-
-
-      
-        
-        
-        </div>
-    </div>
-        
-        
-        
-        
-        
-          <div class="laneWrapper">
-    <div class="laneTitle">
-        <span class="spanTitle">Files</span>
-        </div>
-    <div class="laneContent">
-        
-        
-        
-        
-        
-
-  <?php foreach($trafficDelays as $trafficDelay): ?>
-        
-         <div class="itemWrapper">
-        <div class="date">
-             
-
-           <span class="roadName"><?php echo $trafficDelay['road']; ?></span>
-             
-             
-             </div>
-           
-           <div id="" class="itemContentWrapper">
-               
-               
-               
-               <div class="itemContent">
-               
-            <p class="title"><?php echo $trafficDelay['km'] . " " . "km";?></p>
-                <p class="subTitle"><?php echo $trafficDelay['trajectBegin'] . " " . "-" . " " . $trafficDelay['trajectEnd'];?></p>
-               
-                 <p class="subSubTitle"><?php echo $trafficDelay['delayTime'] . " " . "minuten vertraging";?></p>
-             
-             </div>
-               
-               </div>
-             
-             
-             
-        </div>
-
-        
-   <?php endforeach; ?>
-
-
-      
-        
-        
-        </div>
-    </div>
-        
-        
-        
-             <div class="laneWrapper">
-    <div class="laneTitle">
-        <span class="spanTitle">Incidenten</span>
-        </div>
-    <div class="laneContent">
-        
-        
-        
-        
-        
-
-  <?php foreach($incidents as $incident): ?>
-        
-         <div class="itemWrapper">
-        <div class="date">
-             
-           <span class="roadName"><?php echo $incident['road']; ?></span>
-            
-             
-             
-             </div>
-             
-             
-             <div class="itemContentWrapper"> 
-           
-           <div id="" class="itemContent">
-               
-               
-            <p class="title"><?php echo $incident['incident'];?></p>
-                <p class="subTitle"><?php echo $incident['city'];?></p>
-               
-                 
-             
-             </div>
-                 
-                 </div>
-             
-             
-             
-        </div>
-
-        
-   <?php endforeach; ?>
-
-
-      
-        
-        
-        </div>
-    </div>
-        
-        
-        
-        
+                
         
         </div>
     

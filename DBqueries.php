@@ -27,10 +27,6 @@ $queryTrafficOV = "
 
 
 
-
-
-
-
 $queryModules = "
         
         SELECT *
@@ -39,9 +35,6 @@ $queryModules = "
         
       
         $resultsModules = mysqli_query($conn, $queryModules);
-
-
-
 
 
 
