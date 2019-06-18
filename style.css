@@ -11,7 +11,10 @@ body,html{
 
 
 
-
+.contentSection{
+    
+    transition: all .25s ease-in-out;
+}
 
 
 .left-menu{

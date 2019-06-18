@@ -58,11 +58,31 @@ if ( isset( $_SESSION['username'] ) ) { ?>
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
       
+     
+      
+      if($("li:nth-child(1)").hasClass('active')){
+         
+         document.getElementById("trafficInfo").style.display = "block";
+      document.getElementById("test").style.display = "none";
+         
+         };
+            
+            
+            if($("li:nth-child(2)").hasClass('active')){
+               
+         document.getElementById("test").style.display = "block";
+         document.getElementById("trafficInfo").style.display = "none";
+        
+         
+         };
+      
+      
       
       
       
   })
 })
+    
 		</script>
     
     
@@ -209,8 +229,8 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         </div>
     
     
-    
-    
+ 
+    <section class="contentSection" id="trafficInfo">
     <div class="lanesWrapper">
     <div class="laneWrapper">
     <div class="laneTitle">
@@ -437,6 +457,67 @@ if ( isset( $_SESSION['username'] ) ) { ?>
         
         
         </div>
+        
+        </section>
+    
+    
+    <section class="contentSection" id="test">
+        
+        <div class="lanesWrapper">
+    
+         <div class="laneWrapper">
+    <div class="laneTitle">
+        <span class="spanTitle">Incidenten</span>
+        </div>
+    <div class="laneContent">
+        
+        
+        
+        
+        
+
+  <?php foreach($resultsIncidents as $incident): ?>
+        
+         <div class="itemWrapper">
+        <div class="date">
+             
+           <span class="roadName"><?php echo $incident['road']; ?></span>
+            
+             
+             
+             </div>
+             
+             
+             <div class="itemContentWrapper"> 
+           
+           <div id="" class="itemContent">
+               
+               
+            <p class="title"><?php echo $incident['incident'];?></p>
+                <p class="subTitle"><?php echo $incident['city'];?></p>
+               
+                 
+             
+             </div>
+                 
+                 </div>
+             
+             
+             
+        </div>
+        
+             </div>
+
+        
+   <?php endforeach; ?>
+
+
+      
+        
+        
+        </div>
+    </div>
+    </section>
     
     
     
